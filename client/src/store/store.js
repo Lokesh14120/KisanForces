@@ -12,7 +12,7 @@ const store = configureStore({
     [problemStatusApi.reducerPath]: problemStatusApi.reducer,
   },
   // TODO: uncomment devTools: false before deployment
-  // devTools: false,
+  devTools: false,
 
   // adding the api middleware enables caching, invalidation, polling and other features of `rtk-query`
   middleware: (getDefaultMiddleware) =>
@@ -20,16 +20,4 @@ const store = configureStore({
 });
 
 export default store;
-// import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-// import authSlice from "./authSlice";
 
-// const store = configureStore({
-//   reducer: {
-//     auth: authSlice.reducer
-//   },
-//   middleware: getDefaultMiddleware({
-//     serializableCheck: false
-//   })
-// });
-
-// export default store;
