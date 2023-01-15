@@ -1,9 +1,9 @@
-import { Avatar } from "@nextui-org/react";
+
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { asyncLogin, asyncLogout } from "../store/authSlice";
-import store from "../store/store";
+import { asyncLogout } from "../store/authSlice";
+
 
 export default function Navbar() {
   const user = useSelector((state) => state.auth.user);
@@ -45,7 +45,8 @@ export default function Navbar() {
               </span>
             <div className="origin-top-right absolute right-0 mt-1 mb-7 w-30 rounded-md shadow-lg">
               <div className="py-1 rounded-md bg-white shadow-xs">
-                <a href="#" className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100" onClick={handleLogout}>Logout</a>
+              <button className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100" onClick={handleLogout}>Logout</button>
+
               </div>
             </div>
             </div>

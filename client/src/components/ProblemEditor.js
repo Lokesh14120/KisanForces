@@ -2,12 +2,12 @@ import { Loading } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { Route, Routes, useSearchParams } from "react-router-dom";
-import { asyncProgrammemRun, asyncProgrammemSubmit } from "../store/CodeSlice";
+import {  useSearchParams } from "react-router-dom";
+import {  asyncProgrammemSubmit } from "../store/CodeSlice";
 import { useGetProblemStatusQuery } from "../store/services/ProblemStatus";
 import Editor from "./Editor";
 
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import axios from 'axios';
 import * as qs from 'qs';
 
 export default function ProblemEditor() {
@@ -58,7 +58,7 @@ export default function ProblemEditor() {
         }
       }
     }
-  }, [problemData.data]);
+  }, [problemData.data,problemData]);
 
 
   const checkCode = async() => {

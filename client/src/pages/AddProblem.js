@@ -7,13 +7,13 @@ import { useSearchParams } from "react-router-dom";
 import rehypeSanitize from "rehype-sanitize";
 import TestcaseContainer from "../components/TestcaseContainer";
 import TestcaseModal from "../components/TestcaseModal";
-import { ProblemSlice } from "../store/ProblemSlice";
+
 import {
   asyncProblemAdd,
   asyncProblemEdit,
   setTestcase,
 } from "../store/ProblemSlice";
-import store from "../store/store";
+
 
 export default function AddProblem() {
   const user = useSelector((state) => state.auth.user);
@@ -51,7 +51,7 @@ export default function AddProblem() {
       });
       if (problem.testcase) dispatch(setTestcase(problem.testcase));
     }
-  }, [editDetails, problem]);
+  }, [dispatch,editDetails, problem]);
 
   console.log(problem);
 

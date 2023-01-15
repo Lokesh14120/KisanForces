@@ -1,27 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import {
   useLocation,
-  useNavigate,
-  useParams,
   useSearchParams,
 } from "react-router-dom";
 
 import ProblemEditor from "../components/ProblemEditor";
 import ProblemStatement from "../components/ProblemStatement";
 import { asyncSingleProblemGet } from "../store/ProblemSlice";
-import store from "../store/store";
+
 
 function ProblemPage() {
   const dispatch = useDispatch();
   const location = useLocation().pathname.split("/")[2];
-  const navigate = useNavigate();
+  
   const [searchParams] = useSearchParams();
   const drawer = searchParams.get("drawer");
 
   useEffect(() => {
     dispatch(asyncSingleProblemGet(location));
-  }, []);
+  }, [dispatch, location]);
 
   return (
     <div className="flex">

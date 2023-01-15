@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import DesignIllustration from "../../images/codepic.svg";
 
 
-export default () => {
+const Home = () => {
     return (
         <>
 
@@ -36,3 +36,4 @@ export default () => {
         </>
     );
 };
+export default Home;

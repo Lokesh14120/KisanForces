@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
+// import { useSelector } from "react-redux";
 import Hero from "../components/Hero/Hero";
 import { asyncProblemGet } from "../store/ProblemSlice";
 // import store from "../store/store";
@@ -7,11 +8,11 @@ import { asyncProblemGet } from "../store/ProblemSlice";
 
 export default function Home() {
   const dispatch = useDispatch()
-  const problems = useSelector((state) => state.problem.problems)
+  // const problems = useSelector((state) => state.problem.problems)
 
   useEffect(() => {
     dispatch(asyncProblemGet())
-  }, [])
+  }, [dispatch])
 
   return (
     <>

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Editor from "../components/Editor";
-import { useDispatch, useSelector } from "react-redux";
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import {  useSelector } from "react-redux";
+import axios from 'axios';
 import * as qs from 'qs';
 
 

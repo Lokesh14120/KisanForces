@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Codemirror, { EditorFromTextArea } from "codemirror";
+import Codemirror from "codemirror";
 import "codemirror/theme/idea.css";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/clike/clike";
@@ -36,7 +36,7 @@ export default function Editor() {
     console.log(temp[localLanguage])
     console.log("locallang0");
     dispatch(setCurrentLang(localLanguage));
-  }, []);
+  }, [dispatch, language, location, stubs]);
 
   useEffect(() => {
     const init = () => {
@@ -82,7 +82,7 @@ export default function Editor() {
         }
       });
     }
-  }, [location, language, stubs]);
+  }, [currentCode,dispatch,location,language,stubs]);
 
   return (
     <>

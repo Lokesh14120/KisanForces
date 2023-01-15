@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ProblemType, PropblemDetailType, TestcaseType } from "../utils/type";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
 
 // import store from "./store"; 
 const initialState = {

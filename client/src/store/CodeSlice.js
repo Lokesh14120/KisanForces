@@ -1,8 +1,7 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
-import { UserSubmissionType } from "../utils/type";
-// import store from "./store";
-import axios, { AxiosResponse, AxiosError } from 'axios';
+
+import axios from 'axios';
 
 const initialState = {
   currentCode: "",

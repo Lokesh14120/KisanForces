@@ -1,8 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import toast from "react-hot-toast";
-import { UserType } from "../utils/type";
-// import store from "./store";
-import { ProblemSlice } from './ProblemSlice';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
 
 const initialState = {
   user: undefined
