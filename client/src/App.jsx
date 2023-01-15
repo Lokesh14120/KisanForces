@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     dispatch(asyncLogin())  
-  }, [dispatch]);
+  }, []);
 
   return (
     <div>
