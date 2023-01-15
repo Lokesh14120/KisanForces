@@ -36,7 +36,7 @@ export default function Editor() {
     console.log(temp[localLanguage])
     console.log("locallang0");
     dispatch(setCurrentLang(localLanguage));
-  }, [dispatch, language, location, stubs]);
+  }, []);
 
   useEffect(() => {
     const init = () => {
@@ -82,7 +82,7 @@ export default function Editor() {
         }
       });
     }
-  }, [currentCode,dispatch,location,language,stubs]);
+  }, [location,language,stubs]);
 
   return (
     <>
