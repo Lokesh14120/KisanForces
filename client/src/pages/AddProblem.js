@@ -161,7 +161,7 @@ export default function AddProblem() {
           </div>
           <div className="flex items-start">
             <p className="w-48 min-w-fit">Input Format</p>
-            <div className="flex-grow  max-w-[880px]">
+            <div className="flex-grow h-40 max-w-[880px]">
               <MDEditor
                 value={problemDetail.input}
                 onChange={(e) =>
