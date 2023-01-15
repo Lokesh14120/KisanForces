@@ -51,7 +51,7 @@ export default function AddProblem() {
       });
       if (problem.testcase) dispatch(setTestcase(problem.testcase));
     }
-  }, [dispatch,editDetails, problem]);
+  }, [editDetails, problem]);
 
   console.log(problem);
 

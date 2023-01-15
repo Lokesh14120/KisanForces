@@ -58,7 +58,7 @@ export default function ProblemEditor() {
         }
       }
     }
-  }, [problemData.data,problemData]);
+  }, [problemData.data]);
 
 
   const checkCode = async() => {

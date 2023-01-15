@@ -19,7 +19,7 @@ function ProblemPage() {
 
   useEffect(() => {
     dispatch(asyncSingleProblemGet(location));
-  }, [dispatch, location]);
+  }, []);
 
   return (
     <div className="flex">
