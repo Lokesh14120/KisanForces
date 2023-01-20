@@ -14,3 +14,8 @@ With its robust and efficient use of modern web development
 
 
 ![home](https://user-images.githubusercontent.com/115223366/213677578-d41b1fc7-9ed4-49e3-8b71-35ae33b74dae.png)
+![create problem](https://user-images.githubusercontent.com/115223366/213677687-616915c8-dddf-4038-b94b-f6cf968e1967.png)
+![problemlist](https://user-images.githubusercontent.com/115223366/213677721-9b8e9257-93ed-40fc-a653-907eda277fcc.png)
+![edit](https://user-images.githubusercontent.com/115223366/213677741-70f765f7-9cd4-49b1-a1d7-d242d282cf4f.png)
+![compile](https://user-images.githubusercontent.com/115223366/213677762-9306e64d-4415-4171-8efb-edda268de0e1.png)
+![problem solve](https://user-images.githubusercontent.com/115223366/213677806-8a4e7747-8cc8-4058-8bf9-869e1101ec7c.png)
