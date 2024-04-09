@@ -149,7 +149,7 @@ export default function AddProblem() {
           </div>
           <div className="flex items-start">
             <p className="w-48 min-w-fit">Problem Statement</p>
-            <div className="flex-grow max-w-[880px]">
+            <div className="flex-grow h-40 max-w-[880px]">
               <MDEditor
                 value={problemDetail.statement}
                 onChange={(e) =>
@@ -176,7 +176,7 @@ export default function AddProblem() {
           </div>
           <div className="flex items-start">
             <p className="w-48 min-w-fit">Output Format</p>
-            <div className="flex-grow  max-w-[880px]">
+            <div className="flex-grow h-40  max-w-[880px]">
               <MDEditor
                 value={problemDetail.output}
                 onChange={(e) =>
@@ -191,7 +191,7 @@ export default function AddProblem() {
           </div>
           <div className="flex items-start">
             <p className="w-48 min-w-fit">Constraints</p>
-            <div className="flex-grow  max-w-[880px]">
+            <div className="flex-grow h-40  max-w-[880px]">
               <MDEditor
                 value={problemDetail.constraints}
                 onChange={(e) =>

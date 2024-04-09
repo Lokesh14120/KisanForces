@@ -32,12 +32,15 @@ export default function ProblemEditor() {
 
   useEffect(() => {
     setJobId(JobId);
+    console.log("JobId", JobId);
   }, [JobId]);
+  // useEffect(() => {
+  //   setBottomDrawer("input");
+  // }, [bottomDrawer]);
  
   // Status polling
   const problemData = useGetProblemStatusQuery(
-    jobId,
-    !!jobId && !skip ? { pollingInterval: 1000 } : { skip: true }
+    jobId
   );
 
   useEffect(() => {
@@ -50,6 +53,7 @@ export default function ProblemEditor() {
       if (data.job.status !== "in queue") {
         setSkip(true);
         setStatus(data.job.status);
+        console.log("status", data.job.status);
         setOutput(data.job.output);
         if (data.job.verdict) {
           setBottomDrawer("result");
@@ -73,11 +77,11 @@ export default function ProblemEditor() {
     var data = qs.stringify({
       'code': currentCode,
       'language': currentLang,
-      'input': userInput
+      userInput
   });
   var config = {
       method: 'post',
-      url: 'https://api.codex.jaagrav.in',
+      url: 'http://localhost:5000/api/codetest/run',
       headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -188,7 +192,8 @@ export default function ProblemEditor() {
               className={`${
                 bottomDrawer === "result" && "bg-white shadow"
               } p-2 px-4 rounded-md`}
-              onClick={() => setBottomDrawer("result")}
+              // onClick={() => setBottomDrawer("result")}
+              onClick={() => setBottomDrawer("output")}
             >
               Code Result
             </button>
@@ -205,9 +210,9 @@ export default function ProblemEditor() {
                 className={`bg-white flex-grow w-full border
                  ${
                   verdict === "ac"
-                    ?"border-slate-700"
+                    ?"border-green-600"
                     : verdict === "wa"
-                    ?"border-slate-700"
+                    ?"border-red-600"
                     : verdict === "tle"
                     ? "border-red-800"
                     : "border-slate-700"
